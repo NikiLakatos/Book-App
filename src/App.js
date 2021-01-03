@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BottomPage } from "./components/BottomSection/BottomPage";
+import { Navigations } from "./components/TopSection/Navigations";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Dashboard } from "./components/MainSection/Dashboard";
+import { AddBook } from "./components/MainSection/AddBook";
+import { HomePage } from "./components/MainSection/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navigations />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/addBook" component={AddBook} />
+        </Switch>
+        <BottomPage />
+      </Router>
     </div>
   );
 }

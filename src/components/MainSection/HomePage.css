@@ -1,0 +1,27 @@
+.homePageContent {
+  /* background-color: #e8cebf; */
+  display: flex;
+  height: 49.2rem;
+}
+
+.homePageContent .textAndButtonContent {
+  width: 50%;
+}
+
+.homePageContent .textAndButtonContent .textContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+  color: #fdf8f5;
+}
+
+.homePageContent .textAndButtonContent .buttonContent {
+  background-color: #266150;
+  color: #fdf8f5;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  width: 9rem;
+  margin-left: 16rem;
+  cursor: pointer;
+}
